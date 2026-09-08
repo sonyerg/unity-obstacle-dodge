@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class Dropper : MonoBehaviour
 {
+    [SerializeField] float timeToWait = 2f;
     void Start()
     {
-        
+
     }
     void Update()
     {
-        if (Mathf.Approximately(Time.time, Mathf.Round(Time.time)))
+        if (Time.time >= timeToWait)
         {
-            Debug.Log("Time elapsed: " + Time.time);
+            GetComponent<Rigidbody>().useGravity = true;
         }
     }
 }
