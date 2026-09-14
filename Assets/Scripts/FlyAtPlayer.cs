@@ -7,6 +7,11 @@ public class FlyAtPlayer : MonoBehaviour
     [SerializeField] float projectileSpeed = 10f;
     Vector3 playerPos;
 
+    void Awake()
+    {
+        // Runs first before start(). runs even if the script component is disabled
+        gameObject.SetActive(false);
+    }
     void Start()
     {
         playerPos = player.transform.position;
