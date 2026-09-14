@@ -25,9 +25,6 @@ public class FlyAtPlayer : MonoBehaviour
 
     void DestroyWhenReached()
     {
-        if (transform.position == playerPos)
-        {
-            Destroy(gameObject);
-        }
+        if (transform.position == playerPos) Destroy(gameObject);
     }
 }
