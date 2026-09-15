@@ -10,7 +10,8 @@ public class TriggerProjectile : MonoBehaviour
         {
             foreach (GameObject projectile in projectiles)
             {
-                if (projectile != null) projectile.SetActive(true);
+                projectile.SetActive(true);
+                Destroy(gameObject);
             }
         }
     }
