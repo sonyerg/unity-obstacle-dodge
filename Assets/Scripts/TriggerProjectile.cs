@@ -11,6 +11,7 @@ public class TriggerProjectile : MonoBehaviour
             foreach (GameObject projectile in projectiles)
             {
                 projectile.SetActive(true);
+                // remove trigger volume when triggeredf
                 Destroy(gameObject);
             }
         }
